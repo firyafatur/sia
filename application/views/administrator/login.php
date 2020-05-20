@@ -1,4 +1,4 @@
-<body class="bg-gradient-info">
+<body class="bg-gradient-danger">
 
     <div class="container mt-5">
 
