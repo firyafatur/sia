@@ -15,6 +15,9 @@
 <script src="<?php echo base_url() ?>assets/js/demo/chart-area-demo.js"></script>
 <script src="<?php echo base_url() ?>assets/js/demo/chart-pie-demo.js"></script>
 
+<script type="text/javascript">
+    window.history.forward();
+</script>
 </body>
 
 </html>

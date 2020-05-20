@@ -67,4 +67,12 @@ class Auth extends CI_Controller
             redirect('administrator/auth');
         }
     }
+
+    public function keluar()
+    {
+        $this->session->unset_userdata('username');
+        $this->session->unset_userdata('email');
+        $this->session->unset_userdata('level');
+        redirect('administrator/auth');
+    }
 }
