@@ -21,11 +21,11 @@
                                     <form method="post" action="<?php echo base_url('administrator/auth/prosesLogin') ?>" class="user">
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user" name="username" id="username" aria-describedby="username" placeholder="Username....">
-                                            <?php echo form_error('username', '<div class = "text text-danger sm-3 ml-3">', '</div>') ?>
+                                            <?php echo form_error('username', '<div class = "text text-danger small ml-3">', '</div>') ?>
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user" name="password" id="password" placeholder="Password....">
-                                            <?php echo form_error('password', '<div class = "text text-danger sm-3 ml-3">', '</div>') ?>
+                                            <?php echo form_error('password', '<div class = "text text-danger small ml-3">', '</div>') ?>
                                         </div>
                                         <br>
                                         <!-- <div class="form-group">

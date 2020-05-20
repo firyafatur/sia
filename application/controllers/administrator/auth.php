@@ -10,10 +10,19 @@ class Auth extends CI_Controller
         $this->load->view('templates_administrator/footer');
     }
 
+    public function arrayValidasi()
+    {
+        $this->form_validation->set_rules('username', 'username', 'required', [
+            'required' => '<b><i>Username harus diisi!!</i></b>'
+        ]);
+        $this->form_validation->set_rules('password', 'password', 'required', [
+            'required' => '<b><i>Password harus diisi !!</i>'
+        ]);
+    }
+
     public function prosesLogin()
     {
-        $this->form_validation->set_rules('username', 'username', 'required');
-        $this->form_validation->set_rules('password', 'password', 'required');
+        $this->arrayValidasi();
 
         if ($this->form_validation->run() == FALSE) {
             $this->load->view('templates_administrator/header',);
