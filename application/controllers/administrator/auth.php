@@ -38,7 +38,7 @@ class Auth extends CI_Controller
 
         $username = $this->input->post('username');
         $password = MD5($this->input->post('password'));
-        $cek = $this->loginModel->cekLogin($username, $password);
+        $cek = $this->loginmodel->cekLogin($username, $password);
 
         if ($cek->num_rows() > 0) {
             foreach ($cek->result() as $ck) {
@@ -51,7 +51,7 @@ class Auth extends CI_Controller
             if ($sess_data['level'] == 'admin') {
                 redirect('administrator/dashboard');
             } else {
-                $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
                 Username atau Password Salah !!
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -59,7 +59,7 @@ class Auth extends CI_Controller
                 redirect('administrator/auth');
             }
         } else {
-            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
             Username atau Password Salah !!
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
